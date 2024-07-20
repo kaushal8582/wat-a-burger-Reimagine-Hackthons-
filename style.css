@@ -212,6 +212,17 @@ nav img {
   justify-content: space-evenly;
   position: relative;
   overflow: hidden;
+  
+}
+
+.fullImgBox{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/burger-pattern_836210-1.avif");
+  opacity: 0.06;
 }
 
 .bigcircle {
@@ -910,7 +921,19 @@ nav img {
   width: 100%;
   overflow: hidden;
   background: #000000;
-  color: white
+  color: white;
+  position: relative;
+}
+
+.fullImgMenu{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("images/blackBurger img.jpg");
+  /* z-index: 99; */
+  opacity: 0.06;
 }
 
 .disc {
