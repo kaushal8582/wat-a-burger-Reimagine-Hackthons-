@@ -35,8 +35,8 @@ gsap.from(".footer-anim h1 .footerA", {
     trigger: "#footer",
     scroller: "body",
     // markers:true,
-    start: "65% 85%",
-    end: "65% 85%",
+    start: "140% 80%",
+    end: "bottom top",
     scrub: 2
   }
 })
@@ -52,8 +52,8 @@ gsap.from(".footer-anim h1 .footerB", {
     trigger: "#footer",
     scroller: "body",
     // markers:true,
-    start: "65% 85%",
-    end: "65% 85%",
+    start: "140% 80%",
+    end: "bottom top",
     scrub: 2
   }
 })
@@ -61,15 +61,14 @@ gsap.from("#footer .footer-circle-logo img", {
   transform: "rotate(150deg)",
   duration: 4,
   scrollTrigger: {
-    trigger: "#footer .footer-circle-logo img",
-    scroller: "body",
+    trigger: "#footer ",
+    // scroller: "#footer",
     // markers:true,
-    start: "65% 90%",
-    end: "65% 75%",
+    start: "65% 55%",
+    end: "65% 25%",
     scrub: 2
   }
 })
-
 
 
 
@@ -91,7 +90,6 @@ vl.to("#video-section .video video", {
   height: "90vh",
   borderRadius: "20px"
 })
-
 
 
 
@@ -129,13 +127,6 @@ function animateReview(direction) {
 
 reviewRight.addEventListener("click", () => animateReview(1));
 reviewLeft.addEventListener("click", () => animateReview(-1));
-
-// Shery.imageEffect(".img", {
-//   style: 4,
-//   debug: true,
-// });
-
-
 
 
 // locomotive code 
