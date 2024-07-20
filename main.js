@@ -1,3 +1,57 @@
+let gallery = gsap.timeline({
+  scrollTrigger: {
+      trigger: ".gallery",
+      // markers: true,
+      start: "50% 50%",
+      end: "150% 50%",
+      pin: true,
+      scrub: true
+
+  }
+})
+
+
+gallery.to(".top-con h1", {
+  rotateX: "100deg",
+  opacity:0,
+  duration:1.5,
+  display:"none"
+  // ease:"power1"
+},"rc")
+
+gallery.to(".center-con .upper", {
+  rotateX: "100deg",
+  opacity:0,
+  duration:1.5,
+  // ease:"power1"
+},"rc")
+
+gallery.to(".center-con .lower", {
+  rotateX: "-100deg",
+  opacity:0,
+  duration:1.5,
+  // ease:"power1"
+},"rc")
+
+
+gallery.to(".center-con .middle .middle-left", {                                                                                           
+  rotateY: "-100deg",                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  opacity:0,
+  duration:1.5,
+  // ease:"power1"
+},"rc")
+gallery.to(".center-con .middle .middle-right", {                                                                                           
+  rotateY: "100deg",                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  opacity:0,
+  duration:1.5,
+  // ease:"power1"
+},"rc")
+
+gallery.to(".middle-video", {
+  width:"90vw",
+  height:"90vh",
+  duration:5,
+},"rc")
 
 function breakTheText() {
   let footerH1 = document.querySelector(".footer-anim h1")
@@ -73,24 +127,27 @@ gsap.from("#footer .footer-circle-logo img", {
 
 
 
-//VIDEO SECTION
-var vl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#video-section",
-    scroller: "body",
-    // markers:true,
-    start: "100% 130%",
-    end: "100% 80%",
-    scrub: 2,
-    duration: 2,
-    // pin:true,
-  }
-});
-vl.to("#video-section .video video", {
-  width: "90vw",
-  height: "90vh",
-  borderRadius: "20px"
-})
+
+
+
+// //VIDEO SECTION
+// var vl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#video-section",
+//     scroller: "body",
+//     // markers:true,
+//     start: "100% 130%",
+//     end: "100% 80%",
+//     scrub: 2,
+//     duration: 2,
+//     // pin:true,
+//   }
+// });
+// vl.to("#video-section .video video", {
+//   width: "90vw",
+//   height: "90vh",
+//   borderRadius: "20px"
+// })
 
 
 
@@ -133,5 +190,7 @@ Shery.imageEffect(".img", {
   style: 4,
   debug: true,
 });
+
+
 
 

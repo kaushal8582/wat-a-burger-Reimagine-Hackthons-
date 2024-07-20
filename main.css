@@ -1,65 +1,67 @@
 @font-face {
     font-family: f;
     src: url(font/Unconfirmed\ 802598.crdownload);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: e;
     src: url(font/Unconfirmed\ 630524.crdownload);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: c;
     src: url(font/Unconfirmed\ 406252.crdownload);
-  }
-  
-  
-  @font-face {
+}
+
+
+@font-face {
     font-family: g;
     src: url(font/iconfont.ttf);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: h;
     src: url(font/Hamberger-Bold\ \(1\).ttf);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: i;
     src: url(font/Hamberger-Bold.woff);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: j;
     src: url(font/fontawesome-webfont.woff2);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: k;
     src: url(font/elementskit.woff);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: l;
     src: url(font/download.woff);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: m;
     src: url(font/7cHsv4kjgoGqM7E_CfOA5WouvTo.woff2);
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: n;
     src: url(font/7cHqv4kjgoGqM7E3t-4s51os.woff2);
-  }
-  
-*{
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
     /* background-color: beige; */
@@ -67,9 +69,146 @@ html,body{
 }
 
 
+.food-gallery {
+    min-height: 100vh;
+    width: 100%;
+}
 
+.food-gallery .gallery {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+  .part-1 .top-con {
+    text-align: center;
+    perspective: 800px;
+    perspective-origin: top;
+  }
+   */
+
+/* .top-con h1 {
+    font-size: 4vw;
+    transform: rotateX(0deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    position: relative;
+    top: 5%;
+  
+  } */
+.food-gallery .center-con {
+    min-height: 100vh;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* gap: 2px; */
+    position: relative;
+}
+
+.food-gallery .center-con img {
+    height: 200px;
+    width: 200px;
+}
+
+.food-gallery .center-con .upper {
+    height: 34vh;
+    width: 100%;
+    display: flex;
+    /* gap: 10px; */
+    justify-content: center;
+    perspective: 800px;
+    perspective-origin: top;
+}
+
+.food-gallery .center-con .lower {
+    height: 34vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    perspective: 800px;
+    perspective-origin: bottom;
+}
+
+.food-gallery .upper img {
+    height: 100%;
+    width: 80vw;
+    border-radius: 50px;
+    object-fit: cover;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+.food-gallery .center-con .middle {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.food-gallery .middle img {
+    height: 100%;
+    width: 26vw;
+    /* border-radius: 20px; */
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.food-gallery .middle-video {
+    height: 30vh;
+    width: 27vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-gallery .middle-video video {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: relative;
+}
+
+.food-gallery .lower img {
+    height: 100%;
+    width: 80vw;
+    border-radius: 50px;
+    object-fit: cover;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+}
+
+.food-gallery .middle-left {
+    perspective: 800px;
+    perspective-origin: left;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.food-gallery .middle-right {
+    perspective: 800px;
+    perspective-origin: left;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
 /* video page animation */
-#video-section {
+/* #video-section {
     min-height: 100vh;
     width: 100%;
     background-color: antiquewhite;
@@ -137,7 +276,7 @@ html,body{
         justify-content: center;
     }
   }
-  
+   */
 
 /* review page */
 
@@ -145,9 +284,9 @@ html,body{
     width: 100%;
     height: 100vh;
     position: relative;
-  }
-  
-  #review>h1 {
+}
+
+#review>h1 {
     padding-top: 20px;
     text-align: center;
     font-size: 3vw;
@@ -156,9 +295,9 @@ html,body{
     text-transform: uppercase;
     letter-spacing: 4px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .reviewcard {
+}
+
+.reviewcard {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -175,14 +314,14 @@ html,body{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-  }
-  
-  
-  .reviewcard:nth-child(1) {
+}
+
+
+.reviewcard:nth-child(1) {
     z-index: 9;
-  }
-  
-  .reviewCardLeft img {
+}
+
+.reviewCardLeft img {
     border-radius: 3rem;
     width: 24vw;
     height: 29vw;
@@ -190,41 +329,41 @@ html,body{
     border-bottom-right-radius: 0;
     object-fit: cover;
     object-position: center;
-  }
-  
-  .reviewCardRight {
+}
+
+.reviewCardRight {
     display: flex;
     gap: 2.2rem;
     flex-direction: column;
-  }
-  
-  .reviewCardRight img {
+}
+
+.reviewCardRight img {
     height: 1rem;
-  }
-  
-  .reviewCardRight h3 {
+}
+
+.reviewCardRight h3 {
     font-size: 5rem;
-  }
-  
-  .reviewCardRight h2 {
+}
+
+.reviewCardRight h2 {
     font-size: 1.8rem;
     text-align: start;
     font-weight: 500;
     font-family: f;
-  }
-  
-  .reviewPersonName {
+}
+
+.reviewPersonName {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-family: m;
-  }
-  
-  .reviewCardRight p {
-    font-family: m;
-  }
-  
-  .reviewsButtons {
+    font-family: n;
+}
+
+.reviewCardRight p {
+    font-family: n;
+}
+
+.reviewsButtons {
     width: 12rem;
     height: 3rem;
     position: absolute;
@@ -234,78 +373,88 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  }
-  
-  .reviewBtnleft,
-  .reviewBtnRight {
+}
+
+.reviewBtnleft,
+.reviewBtnRight {
     font-size: 2.5rem;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-  }
-  
-  
-  
-  @media (max-width:1024px) {
+}
+
+
+
+@media (max-width:1024px) {
     #review>h1 {
-      font-size: 5vw;
+        font-size: 5vw;
     }
-  
+
     .reviewcard {
-      padding: 0 2rem;
-      width: 85%;
-      height: 55%;
+        padding: 0 2rem;
+        width: 85%;
+        height: 55%;
     }
-  }
-  
-  @media (max-width:768px) {
-    #review{
-      height: 100vh;
-      width: 100%;
+}
+
+@media (max-width:768px) {
+    #review {
+        height: 100vh;
+        width: 100%;
     }
+
     .reviewcard {
-      width: 95%;
-      height: 80%;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
-    .reviewsButtons{
-      position: absolute;
-      bottom: 0;
-      height: 5vh;
+
+    .reviewsButtons {
+        position: absolute;
+        bottom: 0;
+        height: 5vh;
     }
+
     .reviewCardLeft img {
-      border-radius: 2rem;
-      width: 90vw;
-      height: 45vw;
-      object-fit: cover;
-      object-position: center;
+        border-radius: 2rem;
+        width: 90vw;
+        height: 45vw;
+        object-fit: cover;
+        object-position: center;
     }
-    
-  }
-  @media (max-width:425px) {
-    .reviewcard h1{
-      font-size: 7vw;
+
+}
+
+@media (max-width:425px) {
+    .reviewcard h1 {
+        font-size: 7vw;
     }
-    .reviewcard p{
-      font-size: 4vw;
+
+    .reviewcard p {
+        font-size: 4vw;
     }
-    .reviewcard h2{
-      font-size: 6vw;
+
+    .reviewcard h2 {
+        font-size: 6vw;
     }
-    .reviewCardRight{
-      display: flex ;
-      flex-direction: column;
-      gap: 1.5rem;
+
+    .reviewCardRight {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
-    .reviewCardLeft img{
-      height: 70vw;
-      width: 86vw;
+
+    .reviewCardLeft img {
+        height: 70vw;
+        width: 86vw;
     }
-    #review>h1{
-      font-size: 2.5rem;
+
+    #review>h1 {
+        font-size: 2.5rem;
     }
-  }
+}
+
 /* footer */
 
 #footer {
@@ -382,6 +531,7 @@ html,body{
     height: 50vh;
 
 }
+
 .quick-links h1 {
     font-family: f;
     font-size: 2.5rem;
@@ -516,7 +666,8 @@ html,body{
     .footer-anim h1 {
         text-wrap: nowrap;
     }
-    .footer-anim h1 span{
+
+    .footer-anim h1 span {
         font-size: 9vw;
     }
 
@@ -652,7 +803,7 @@ html,body{
         top: 0;
     }
 
-    #footer .copyright p{
+    #footer .copyright p {
         font-size: 4vw;
     }
 }
@@ -784,3 +935,38 @@ html,body{
         text-wrap: nowrap;
     }
 }
+
+
+
+.food-gallery {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.food-gallery .gallery {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+  .part-1 .top-con {
+    text-align: center;
+    perspective: 800px;
+    perspective-origin: top;
+  }
+   */
+
+/* .top-con h1 {
+    font-size: 4vw;
+    transform: rotateX(0deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    position: relative;
+    top: 5%;
+  
+  } */
+
