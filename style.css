@@ -65,6 +65,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 html,
@@ -72,6 +73,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: antiquewhite;
+  /* cursor: none; */
 }
 
 
@@ -86,6 +88,7 @@ nav {
   z-index: 99;
   position: fixed;
   top: 0;
+  display: none;
 }
 
 nav img {
@@ -254,6 +257,7 @@ nav img {
   justify-content: space-evenly;
   position: relative;
   overflow: hidden;
+  display: none;
   
 }
 
@@ -695,6 +699,7 @@ nav img {
   align-items: center;
   justify-content: center;
   background-color: antiquewhite;
+  display: none;
 }
 
 .page h1 img {
@@ -825,6 +830,7 @@ nav img {
   width: 100%;
   height: 200px;
   background: rgb(255, 222, 8);
+  overflow: hidden;
 }
 
 .recipecard > h1 {
@@ -840,7 +846,8 @@ nav img {
 }
 
 .recipecard img {
-  width: 80%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1390,11 +1397,10 @@ nav img {
 .food-gallery {
   min-height: 100vh;
   width: 100%;
-  
 }
 
 .food-gallery .gallery {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -1403,22 +1409,7 @@ nav img {
   align-items: center;
 }
 
-/* 
-.part-1 .top-con {
-  text-align: center;
-  perspective: 800px;
-  perspective-origin: top;
-}
- */
 
-/* .top-con h1 {
-  font-size: 4vw;
-  transform: rotateX(0deg);
-  transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
-  position: relative;
-  top: 5%;
-
-} */
 .food-gallery .center-con {
   min-height: 100vh;
   width: 98%;
@@ -1526,74 +1517,6 @@ nav img {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* #video-section {
-  min-height: 100vh;
-  width: 100%;
-  background-color: antiquewhite;
-}
-
-#video-section .video-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-
-}
-
-#video-section .video,
-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35vw;
-  height: 60vh;
-  border-radius: 20px;
-}
-
-#video-section video {
-  border-radius: 20px;
-}
-
-
-@media (max-width:425px) {
-  .video-section {
-    height: 45vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .video-div {
-    height: 100%;
-    width: 100%;
-  }
-
-  .video video {
-    border-radius: 20px;
-  }
-}
-
-@media (max-width:768px) {
-  .video-section {
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (max-width:1024px) {
-  .video-section {
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-} */
 
 
 /* review page */

@@ -1,3 +1,8 @@
+// locomotive code 
+(function () {
+  var scroll = new LocomotiveScroll();
+})();
+
 let gallery = gsap.timeline({
   scrollTrigger: {
       trigger: ".gallery",
