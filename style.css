@@ -88,7 +88,7 @@ nav {
   z-index: 99;
   position: fixed;
   top: 0;
-  display: none;
+  /* display: none; */
 }
 
 nav img {
@@ -257,7 +257,7 @@ nav img {
   justify-content: space-evenly;
   position: relative;
   overflow: hidden;
-  display: none;
+  /* display: none; */
   
 }
 
