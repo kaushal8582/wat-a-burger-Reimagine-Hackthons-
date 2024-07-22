@@ -1,4 +1,9 @@
 @font-face {
+    font-family: archivo;
+    src: url(font/Archivo/Archivo-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
     font-family: f;
     src: url(font/Unconfirmed\ 802598.crdownload);
 }
@@ -69,6 +74,306 @@ body {
 }
 
 
+.page {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.page h1 img {
+    height: 4vw;
+    width: 8.4vw;
+    object-fit: cover;
+    border-radius: 10vw;
+    position: absolute;
+    left: 0;
+}
+
+.page video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10vw;
+}
+
+.hover-img-vdo {
+    background-color: red;
+    height: 4vw;
+    width: 8.4vw;
+    border-radius: 10vw;
+    position: relative;
+    left: 0;
+}
+
+.page .hover-img-vdo:hover img {
+    opacity: 0;
+}
+
+
+.text {
+    opacity: 0;
+    position: absolute;
+}
+
+.page h1 {
+    text-wrap: nowrap;
+    font-size: 5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.text-hover {
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+    color: orangered;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+.text-hover h1 {
+    width: 0;
+    /* text-wrap: wrap; */
+    overflow: hidden;
+}
+
+
+
+
+.marque-page {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marque-page .move {
+    background-color: orangered;
+    display: flex;
+    padding: 1vw 0;
+    overflow: hidden;
+}
+
+.marque-page .marque {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 1vw;
+    padding: 0 1.5vw;
+    transform: translateX(-100%);
+}
+
+.marque-page .marque h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: white;
+    font-family: archivo;
+}
+
+.marque-page .marque img {
+    height: 2.8rem;
+    width: 6rem;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+@media (max-width:425px) {
+    .marque-page .marque h1 {
+        font-size: 2rem;
+    }
+
+    .marque-page .marque img {
+        height: 2rem;
+        width: 4rem;
+    }
+}
+
+@media (max-width:320px) {
+    .marque-page .marque h1 {
+        font-size: 1.8rem;
+    }
+
+    .marque-page .marque img {
+        height: 1.8rem;
+        width: 3.8rem;
+    }
+}
+
+
+.food-mood {
+    height: 50vh;
+    width: 100vw;
+}
+
+.food-mood .content {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    /* background-color: red; */
+}
+
+.food-mood .left {
+    height: 40vh;
+    width: 10vw;
+    border-radius: 5vw;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.food-mood .l-eye {
+    height: 0.5vw;
+    width: 0.5vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.food-mood .r-eye {
+    height: 0.5vw;
+    width: 0.5vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.food-mood #eye {
+    height: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3vw;
+}
+
+.food-mood .smile {
+    height: 10%;
+    width: 30%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 2px solid black;
+    border-radius: 40%;
+    position: absolute;
+    top: 22%;
+
+}
+
+.food-mood .right {
+    height: 40vh;
+    width: 10vw;
+    border-radius: 5vw;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.food-mood .right .l-eye {
+    height: 0.5vw;
+    width: 0.5vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.food-mood .right .r-eye {
+    height: 0.5vw;
+    width: 0.5vw;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.food-mood .right .eye {
+    height: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3vw;
+}
+
+.food-mood .right .smile {
+    height: 10%;
+    width: 30%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 2px solid black;
+    border-radius: 40%;
+    position: absolute;
+    top: 22%;
+
+}
+
+.food-mood .center {
+    height: 38%;
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+.food-mood .center h1 {
+    font-family: archivo;
+    font-size: 9vw;
+}
+
+.food-mood .center h1 .span {
+    height: 6.4vw;
+    width: 21vw;
+    border: 1.8vw solid black;
+    border-radius: 3vw;
+    display: inline-block;
+}
+
+.food-mood .center h1 .a {
+    width: 23.1vw;
+}
+
+@media (max-width:768px) {
+
+    .food-mood .left,
+    .food-mood .right {
+        height: 22vh;
+        width: 13vw;
+        border-radius: 10vw;
+    }
+}
+
+@media (max-width:600px) {
+
+    .food-mood .left,
+    .food-mood .right {
+        height: 23vh;
+        width: 15vw;
+        border-radius: 10vw;
+    }
+}
+
+
+
+
+
+
+
+
+
 .food-gallery {
     min-height: 100vh;
     width: 100%;
@@ -83,6 +388,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 /* 
   .part-1 .top-con {
@@ -207,6 +513,79 @@ body {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
+
+
+
+@media (max-width:600px) {
+
+    .center-con .upper,
+    .upper {
+        height: 34vh;
+        width: 100%;
+
+    }
+
+    .center-con .upper img {
+        border-radius: 20px;
+    }
+
+    .center-con .upper,
+    .lower {
+        height: 34vh;
+        width: 100%;
+
+    }
+
+    .center-con .lower img {
+        border-radius: 20px;
+    }
+
+    .center-con .middle {
+        height: 30vh;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+
+    .center-con .upper,
+    .upper {
+        height: 34vh;
+        width: 100%;
+
+    }
+
+    .center-con .upper img {
+        border-radius: 20px;
+    }
+
+    .center-con .upper,
+    .lower {
+        height: 34vh;
+        width: 100%;
+
+    }
+
+    .center-con .lower img {
+        border-radius: 20px;
+    }
+
+    .center-con .middle {
+        height: 30vh;
+        width: 100%;
+    }
+
+    .center-con .middle .middle-left,
+    .middle .middle-right {
+        display: none;
+
+    }
+
+    .center-con .middle .middle-video {
+        width: 90%;
+    }
+}
+
 /* video page animation */
 /* #video-section {
     min-height: 100vh;
@@ -284,6 +663,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    background-color: antiquewhite;
 }
 
 #review>h1 {
@@ -741,6 +1121,11 @@ body {
     .copyright p {
         font-size: 3vw;
     }
+
+    .footer-anim h1 span {
+        opacity: 1;
+        display: inline-block;
+    }
 }
 
 @media (max-width:600px) {
@@ -938,20 +1323,7 @@ body {
 
 
 
-.food-gallery {
-    min-height: 100vh;
-    width: 100%;
-}
 
-.food-gallery .gallery {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 /* 
   .part-1 .top-con {
@@ -969,4 +1341,3 @@ body {
     top: 5%;
   
   } */
-

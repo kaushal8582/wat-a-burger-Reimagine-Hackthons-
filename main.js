@@ -1,3 +1,45 @@
+
+
+window.addEventListener("wheel", function (dets) {
+  if (dets.deltaY > 0) {
+      gsap.to(".marque", {
+          transform: "translateX(-200%)",
+          duration: 4,
+          repeat: -1,
+          ease: "none"
+      })
+      
+  }else{
+      gsap.to(".marque", {
+          transform: "translateX(0)",
+          duration: 4,
+          repeat: -1,
+          ease: "none"
+      })
+  }
+})
+
+
+let am = gsap.timeline({
+  scrollTrigger:{
+      trigger:".page",
+      // markers:true,
+      start:"30% 80%",
+      end:"30% 45%",
+      scrub:1,
+  },
+})
+am.to(".text-hover .first",{
+  width:"100%",
+})
+am.to(".text-hover .second",{
+  width:"100%",
+})
+am.to(".text-hover .third",{
+  width:"100%",
+})
+
+
 let gallery = gsap.timeline({
   scrollTrigger: {
       trigger: ".gallery",
@@ -106,8 +148,8 @@ gsap.from(".footer-anim h1 .footerB", {
     trigger: "#footer",
     scroller: "body",
     // markers:true,
-    start: "65% 85%",
-    end: "65% 85%",
+    start: "70% 90%",
+    end: "70% 70%",
     scrub: 2
   }
 })
