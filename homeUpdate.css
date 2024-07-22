@@ -72,7 +72,7 @@ main{
 
 .stripe {
   position: absolute;
-  width: 110%;
+  width: 116%;
   height: 5vw;
   top: 50%;
   left: 50%;
@@ -83,6 +83,7 @@ main{
 }
 
 .stripe img {
+
   height: 5vw;
   /* background: red; */
 }
@@ -124,10 +125,10 @@ main{
 .centerimg {
   position: absolute;
   height: 13.3vw;
-  top: 60%;
+  top: 65%;
   width: 13.3vw;
-  right: 18%;
-  scale: 1.2;
+  right: 12%;
+  scale: 1.6;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out;
   overflow: hidden;
@@ -142,7 +143,7 @@ main{
 }
 
 .buttons {
-  width: 50vw;
+  width: 46vw;
   height: 6.67vw;
   display: flex;
   align-items: center;
@@ -193,6 +194,20 @@ main{
   justify-content: center;
   padding-top: 10vw;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.temp-good-food-text{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.temp-good-food-text h1{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 3vw;
 }
 
 .templeftTexts {
@@ -200,7 +215,7 @@ main{
 }
 
 .templeftTexts h4 {
-  font-size: 2vw;
+  font-size: 2.5vw;
   padding-left: 1.33vw;
   text-align: left;
   transition: all 0.3s ease-in-out;
@@ -219,7 +234,7 @@ main{
   margin: 0 auto;
   position: relative;
   min-width: 50%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .temp-text1 {
@@ -228,7 +243,7 @@ main{
   margin: 0 auto;
   position: relative;
   min-width: 50%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .templeftTexts h1 {
@@ -244,6 +259,8 @@ main{
   word-spacing: -1.53vw;
   text-align: left;
   letter-spacing: -0.13vw;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .temp-text2 h1:nth-child(1) {
