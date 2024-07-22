@@ -28,6 +28,142 @@ nav.onclick = function () {
 };
 
 
+let arr = [
+  {
+    "src": "images/BURGER.png",
+    "deg": "45",
+  },
+  {
+    "src": "images/icecream.jpg",
+    "deg": "90",
+  },
+  {
+    "src": "images/plate burger.png",
+    "deg": "135",
+  },
+  {
+    "src": "images/burger2.png",
+    "deg": "180",
+  },
+  {
+    "src": "images/coffe.png",
+    "deg": "225",
+  },
+  {
+    "src": "images/icecream.jpg",
+    "deg": "270",
+  },
+  {
+    "src": "images/palatable-chicken-with-spices.png",
+    "deg": "315",
+  },
+  {
+    "src": "images/burger 3.png",
+    "deg": "360",
+  }
+]
+
+const centerImg = document.querySelector(".centerimg img")
+const tempBox = document.querySelector(".tempbox")
+const rightBtn = document.querySelector(".rightbtn")
+const leftbtn = document.querySelector(".leftbtn")
+const temptexth4 = document.querySelectorAll(".temp-text1 h4")
+const temptexth1 = document.querySelectorAll(".temp-text2 h1")
+
+let index = 0;
+
+function rotateRight() {
+  centerImg.style.opacity = '0'
+  temptexth1[index].style.top = '-100%'
+  temptexth4[index].style.top = '-100%'
+  index = (index + 1) % arr.length;
+  if(index==0){
+    temptexth1.forEach((temp)=>{
+        temp.style.top = '100%'
+    })
+    temptexth4.forEach((temp)=>{
+        temp.style.top = '100%'
+    })
+  }
+  temptexth1[index].style.top = '0'
+  temptexth4[index].style.top = '0'
+  tempBox.style.transform = `translate(-50%,-50%) rotate(${arr[index].deg}deg)`
+  setTimeout(() => {
+    centerImg.style.opacity = '1'
+    centerImg.src = arr[index].src;
+  }, 220);
+}
+function rotateLeft() {
+  centerImg.style.opacity = '0'
+  temptexth1[index].style.top = '100%'
+  temptexth4[index].style.top = '100%'
+  index = (index - 1 + arr.length) % arr.length;
+  if(index==7){
+    temptexth1.forEach((temp)=>{
+        temp.style.top = '-100%'
+    })
+    temptexth4.forEach((temp)=>{
+        temp.style.top = '-100%'
+    })
+  }
+   temptexth1[index].style.top = '0'
+  temptexth4[index].style.top = '0'
+  tempBox.style.transform = `translate(-50%,-50%) rotate(${arr[index].deg}deg)`
+  setTimeout(() => {
+    centerImg.style.opacity = '1'
+    centerImg.src = arr[index].src;
+  }, 1120);
+}
+
+
+// setInterval(() => {
+//   // rotateRight()
+//   // rotateLeft()
+// }, 2000);
+
+
+
+rightBtn.addEventListener("click", rotateRight)
+leftbtn.addEventListener("click", rotateLeft)
+
+  
+  
+// our secreate recipe page animation
+
+let recipeTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#ourSecretRecipe",
+    start: "top 70%",
+    end:"top 0%",
+    // markers:true,
+    scrub:2,
+  }
+});
+
+recipeTimeline
+  .from(".yellowbox", { height:0, opacity:0},"<")
+  .from(".yellowbox img", { opacity:0, height:0 },"<") // "<" starts this animation at the same time as the previous one
+  .from(".recipecard1", { opacity:0,left: "-20%",rotate:"60deg"},"<")
+  .from(".recipecard2", { opacity:0,left: "-20%",rotate:"60deg"},"<")
+  .from(".recipecard3", { opacity:0,right: "-20%",rotate:"-60deg"},"<")
+  .from(".recipecard4", { opacity:0,right: "-20%" ,rotate:"-60deg"},"<")
+  .from(".recipecard5", { opacity:0,right: "-20%",rotate:"-60deg"},"<")
+  .from(".recipecard6", { opacity:0,left: "-20%",rotate:"60deg"},"<")
+
+// Create another timeline for the animations with different start positions
+let recipeTimeline2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#ourSecretRecipe",
+    start: "top -20%"
+  }
+});
+
+recipeTimeline2
+  // .from(".recipecard2", { scale: 0, left: "50%" })
+  // .from(".recipecard3", { scale: 0, left: "50%" }, "<");
+
+
+
 
 window.addEventListener("wheel", function (dets) {
   if (dets.deltaY > 0) {
@@ -67,6 +203,132 @@ am.to(".text-hover .second",{
 am.to(".text-hover .third",{
   width:"100%",
 })
+
+
+// Initialize Shery.js with the desired effect
+Shery.imageEffect(".img1", {
+  style: 5, // OR 5 for different variant
+  // debug: true,
+  gooey: true,
+  config: {"a":{"value":2,"range":[0,30]},"b":{"value":-0.97,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.8654174858165786},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":true},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2],"_gsap":{"id":91}},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}} ,
+});
+Shery.imageEffect(".img2", {
+  style: 5, // OR 5 for different variant
+  // debug: true,
+  gooey: true,
+  config: {"a":{"value":2,"range":[0,30]},"b":{"value":-0.97,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.8654174858165786},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":true},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":0,"range":[0,10]},"metaball":{"value":0.2,"range":[0,2],"_gsap":{"id":91}},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}} ,
+});
+
+
+
+
+Shery.textAnimate(".sectionLeft h1" /* Element to target.*/, {
+  //Parameters are optional.
+  style: 1,
+  y: 10,
+  delay: 0.1,
+  duration: 2,
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  multiplier: 0.1,
+});
+
+
+
+
+
+const allBurgerTextH1First = document.querySelectorAll(".first-burger-texth1")
+
+const allBurgerTextH1Second = document.querySelectorAll(".first-burger-text-2")
+
+
+allBurgerTextH1First.forEach((elem)=>{
+  const allFirstH1 = elem.querySelectorAll(".first-burger-texth1 h1")
+  let firstBurgerTextIndex = 0
+  document.querySelector(".img1").addEventListener("click", () => {
+    gsap.to(allFirstH1[firstBurgerTextIndex], {
+      top: "-100%",
+      onComplete: function () {
+        gsap.set(this._targets[0], { top: "100%" })
+      }
+    })
+  
+    if (firstBurgerTextIndex === allFirstH1.length - 1) {
+      firstBurgerTextIndex = 0;
+    } else firstBurgerTextIndex++
+  
+    gsap.to(allFirstH1[firstBurgerTextIndex], {
+      top: "5%"
+    })
+  
+  })
+})
+allBurgerTextH1Second.forEach((elem)=>{
+  const allFirstH1 = elem.querySelectorAll(".first-burger-text-2 h1")
+  let firstBurgerTextIndex = 0
+  document.querySelector(".img2").addEventListener("click", () => {
+    gsap.to(allFirstH1[firstBurgerTextIndex], {
+      top: "-100%",
+      onComplete: function () {
+        gsap.set(this._targets[0], { top: "100%" })
+      }
+    })
+  
+    if (firstBurgerTextIndex === allFirstH1.length - 1) {
+      firstBurgerTextIndex = 0;
+    } else firstBurgerTextIndex++
+  
+    gsap.to(allFirstH1[firstBurgerTextIndex], {
+      top: "5%"
+    })
+  
+  })
+})
+
+// menu page animtion page sixth 
+
+const allTextP = document.querySelectorAll(".textp")
+allTextP.forEach((text) => {
+  const textcontent = text.textContent
+  const splitedText = textcontent.split("");
+  let clutter = ''
+  splitedText.forEach((e) => {
+    if (e == " ") {
+      e = "-"
+    }
+    clutter += `<span class="a" >${e}</span>`
+  })
+
+  text.innerHTML = clutter
+})
+
+const createAnimation = (selector, properties, scrollTrigger) => {
+  gsap.from(selector, {
+    ...properties,
+    scrollTrigger: {
+      trigger: ".menu",
+      scrub: true,
+      ...scrollTrigger
+    }
+  });
+};
+
+// Text animations
+createAnimation(".textp.first span", { opacity: 0, stagger: 0.1 }, { start: "10% 50%", end: "50% 90%" });
+createAnimation(".textp.second span", { opacity: 0, stagger: 0.1 }, { start: "30% 50%", end: "50% 90%" });
+createAnimation(".textp.third span", { opacity: 0, stagger: 0.1 }, { start: "60% 50%", end: "80% 90%" });
+createAnimation(".textp.fourth span", { opacity: 0, stagger: 0.1 }, { start: "80% 70%", end: "90% 60%" });
+
+// Image animations
+createAnimation(".firstImg", { rotate: 90, stagger: 0.1 }, { start: "10% 50%", end: "50% 90%" });
+createAnimation(".secondImg", { rotate: 90, stagger: 0.1 }, { start: "30% 50%", end: "50% 40%" });
+createAnimation(".thirdImg", { rotate: 90, stagger: 0.1 }, { start: "60% 50%", end: "80% 70%" });
+createAnimation(".fourthImg", { rotate: 90, stagger: 0.1 }, { start: "80% 70%", end: "90% 50%" });
+
+// smoke or salt img animation
+createAnimation(".saltimg img", { x: "-100%" }, { start: "10% 50%", end: "50% 90%" })
+createAnimation(".saltimg1 img", { x: "-100%" }, { start: "40% 50%", end: "50% 20%" })
+
+
 
 
 let gallery = gsap.timeline({
