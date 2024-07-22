@@ -74,6 +74,130 @@ body {
 }
 
 
+nav {
+    height: 11vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    /* padding: 0.5vw; */
+    /* background-color: blue; */
+  
+  
+  }
+  
+  nav img {
+    height: 19vw;
+    transform: rotate(90deg);
+    margin-left: 6vw;
+  }
+  .nav-bar{
+    padding: 0.5vw 0.7vw;
+    height: 3.2vw;
+    width: 9.4vw;
+    display: flex;
+    gap: 0.8vw;
+    align-items: center;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 2vw;
+  
+  
+  }
+  .nav-bar p{
+    font-size: 1.3vw;
+    text-transform: uppercase;
+  }
+  
+  .toggle {
+    position: fixed;
+    top: 1.6vw;
+    right: -1.2vw;
+    width: 10.2vw;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .toggle span {
+    position: absolute;
+    width: 2.2vw;
+    height: 0.14vw;
+    background-color: black;
+    border-radius: 0.9vw;
+    transition: 0.5s;
+  }
+  
+  .toggle span:nth-child(1) {
+    top: 0.72vw;
+  }
+  
+  
+  .toggle span:nth-child(2) {
+    top: 1.29vw;
+  }
+  
+  .toggle.active span:nth-child(1) {
+    top: 1vw;
+    transform: rotate(45deg);
+  }
+  
+  
+  .toggle.active span:nth-child(2) {
+    top: 1vw;
+    transform: rotate(-45deg);
+  }
+  
+  .full {
+    height: 88vh;
+    width: 32vw;
+    background-color: #f06630;
+    position: fixed;
+    top: 4.8vw;
+    right: -60vw;
+    border-radius: 1.5vw;
+    overflow: hidden;
+    transition: height 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
+    opacity: 0;
+  }
+  
+  .full h4 {
+    font-size: 3vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: archivo;
+    text-align: center;
+  }
+  
+  .full.active {
+    height: 89vh;
+  }
+  
+  .full .nav-social {
+    display: flex;
+    gap: 1.2rem;
+    position: relative;
+    top: 6rem;
+    left: 3.5vw;
+  }
+  
+  .full .nav-social i {
+    font-size: 1.5rem;
+  }
+  
+  
 .page {
     height: 50vh;
     width: 100vw;
