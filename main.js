@@ -1,4 +1,28 @@
 
+let nav = document.querySelector(".toggle");
+let fullNav = document.querySelector(".full");
+
+nav.onclick = function () {
+  nav.classList.toggle("active");
+  fullNav.classList.toggle("active");
+  if (fullNav.classList.contains("active")) {
+    gsap.to(".full", {
+      opacity:1,
+      duration: 1,
+      right:"1vw"
+    });
+    gsap.from(".full h4",{
+        opacity:1,
+        duration:1,
+        stagger:0.5
+    })
+    }
+  else {
+    gsap.to(".full",{ opacity:0, duration: 1,right:"-30vw"});
+  }
+};
+
+
 
 window.addEventListener("wheel", function (dets) {
   if (dets.deltaY > 0) {
