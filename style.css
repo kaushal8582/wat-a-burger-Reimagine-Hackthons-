@@ -1392,11 +1392,23 @@ nav img {
 
 }
 
+<<<<<<< HEAD
 /* video page animation food gallery */
+=======
+/* video page animation */
+
+>>>>>>> 52e6eb9047783ddf6e4ea301d050b59106a3b86d
 
 .food-gallery {
   min-height: 100vh;
   width: 100%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 52e6eb9047783ddf6e4ea301d050b59106a3b86d
+>>>>>>> praveen
 }
 
 .food-gallery .gallery {
