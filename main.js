@@ -112,7 +112,7 @@ function rotateLeft() {
   setTimeout(() => {
     centerImg.style.opacity = '1'
     centerImg.src = arr[index].src;
-  }, 1120);
+  }, 220);
 }
 
 
@@ -134,7 +134,7 @@ let recipeTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: "#ourSecretRecipe",
     start: "top 70%",
-    end:"top 0%",
+    end:"top -150%%",
     // markers:true,
     scrub:2,
   }
@@ -154,7 +154,8 @@ recipeTimeline
 let recipeTimeline2 = gsap.timeline({
   scrollTrigger: {
     trigger: "#ourSecretRecipe",
-    start: "top -20%"
+    start: "top -20%",
+    // markers:true,
   }
 });
 
@@ -184,7 +185,7 @@ window.addEventListener("wheel", function (dets) {
   }
 })
 
-
+// page animation
 let am = gsap.timeline({
   scrollTrigger:{
       trigger:".page",
@@ -285,20 +286,20 @@ const createAnimation = (selector, properties, scrollTrigger) => {
 };
 
 // Text animations
-createAnimation(".textp.first span", { opacity: 0, stagger: 0.1 }, { start: "10% 50%", end: "50% 90%" });
-createAnimation(".textp.second span", { opacity: 0, stagger: 0.1 }, { start: "30% 50%", end: "50% 90%" });
-createAnimation(".textp.third span", { opacity: 0, stagger: 0.1 }, { start: "60% 50%", end: "80% 90%" });
-createAnimation(".textp.fourth span", { opacity: 0, stagger: 0.1 }, { start: "80% 70%", end: "90% 60%" });
+createAnimation(".textp.first span", { opacity: 0, stagger: 0.1 }, { start: "30% 40%", end: "50% 60%",});
+createAnimation(".textp.second span", { opacity: 0, stagger: 0.1 }, { start: "40% 40%", end: "70% 10%",  });
+createAnimation(".textp.third span", { opacity: 0, stagger: 0.1 }, { start: "90% 50%", end: "100% 50%" });
+createAnimation(".textp.fourth span", { opacity: 0, stagger: 0.1 }, { start: "110% 50%", end: "120% 50%" });
 
 // Image animations
-createAnimation(".firstImg", { rotate: 90, stagger: 0.1 }, { start: "10% 50%", end: "50% 90%" });
-createAnimation(".secondImg", { rotate: 90, stagger: 0.1 }, { start: "30% 50%", end: "50% 40%" });
-createAnimation(".thirdImg", { rotate: 90, stagger: 0.1 }, { start: "60% 50%", end: "80% 70%" });
-createAnimation(".fourthImg", { rotate: 90, stagger: 0.1 }, { start: "80% 70%", end: "90% 50%" });
+createAnimation(".firstImg", { rotate: 90, stagger: 0.1 }, { start: "30% 40%", end: "50% 60%" });
+createAnimation(".secondImg", { rotate: 90, stagger: 0.1 }, { start: "60% 40%", end: "70% 10%" });
+createAnimation(".thirdImg", { rotate: 90, stagger: 0.1 }, { start: "90% 50%", end: "100% 50%", });
+createAnimation(".fourthImg", { rotate: 90, stagger: 0.1 }, { start: "110% 50%", end: "120% 50%" });
 
 // smoke or salt img animation
-createAnimation(".saltimg img", { x: "-100%" }, { start: "10% 50%", end: "50% 90%" })
-createAnimation(".saltimg1 img", { x: "-100%" }, { start: "40% 50%", end: "50% 20%" })
+createAnimation(".saltimg img", { x: "-100%" }, { start: "30% 30%", end: "50% 60%" })
+createAnimation(".saltimg1 img", { x: "-100%" }, { start: "70% 50%", end: "70% 10%" })
 
 
 
@@ -340,13 +341,13 @@ gallery.to(".center-con .lower", {
 
 
 gallery.to(".center-con .middle .middle-left", {                                                                                           
-  rotateY: "-100deg",                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  rotateY: "-100deg",                                                                                                  
   opacity:0,
   duration:1.5,
   // ease:"power1"
 },"rc")
 gallery.to(".center-con .middle .middle-right", {                                                                                           
-  rotateY: "100deg",                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  rotateY: "100deg",                                                                                             
   opacity:0,
   duration:1.5,
   // ease:"power1"
@@ -453,6 +454,98 @@ gsap.from("#footer .footer-circle-logo img", {
 //   height: "90vh",
 //   borderRadius: "20px"
 // })
+
+
+// burgeranimation page
+let burgerpageTimeline = gsap.timeline({
+  scrollTrigger: {
+    start: "50% 50%",
+    end: "bottom top",
+    // markers:true,
+    scrub: true,
+    trigger: "#burgeranimation",
+    pin: true,
+  }
+})
+
+gsap.from("#burgeranimtionPage1 .burgerimg", {
+  top: "100%",
+  scrollTrigger: {
+    trigger: "#burgeranimation",
+    start: "30% 50%",
+    end: "50% 50%",
+    // markers:true,
+    scrub: true
+
+  }
+})
+
+burgerpageTimeline.from(" #burgeranimtionPage1 .bi", {
+  top: "50%",
+  left: "50%",
+  duration: 2,
+  zindex: -1,
+  scale: 0
+}, "a")
+
+burgerpageTimeline.from("#burgeranimtionPage1 h1", {
+  top: "50%",
+  left: "50%",
+  opacity: 0,
+  scale: 0
+}, "a")
+
+
+
+burgerpageTimeline.to("#burgeranimationPage2",{
+  width:"100vw",
+  ease:Expo.isOut,
+  duration:4
+})
+
+burgerpageTimeline.from("#burgeranimationPage2 .burgerimg", {
+ top: "150%",
+})
+
+burgerpageTimeline.from("#burgeranimationPage2 .bi", {
+  top: "50%",
+  left: "50%",
+  duration: 2,
+  zindex: -1,
+  scale: 0
+}, "beauty")
+
+burgerpageTimeline.from("#burgeranimationPage2 h1", {
+  top: "50%",
+  left: "50%",
+  opacity: 0,
+  scale: 0
+}, "beauty")
+
+burgerpageTimeline.to("#burgeranimationPage3",{
+  width:"100vw",
+  ease:Expo.isOut,
+  duration:4
+})
+
+burgerpageTimeline.from("#burgeranimationPage3 .burgerimg", {
+ top: "150%",
+})
+
+burgerpageTimeline.from("#burgeranimationPage3 .bi", {
+  top: "50%",
+  left: "50%",
+  duration: 2,
+  zindex: -1,
+  scale: 0
+}, "kaushal")
+
+burgerpageTimeline.from("#burgeranimationPage3 h1", {
+  top: "50%",
+  left: "50%",
+  opacity: 0,
+  scale: 0
+}, "kaushal")
 
 
 
