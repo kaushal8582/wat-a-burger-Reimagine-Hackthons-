@@ -491,10 +491,6 @@ function animateReview(direction) {
 
 reviewRight.addEventListener("click", () => animateReview(1));
 reviewLeft.addEventListener("click", () => animateReview(-1));
-Shery.imageEffect(".img", {
-  style: 4,
-  debug: true,
-});
 
 
 
