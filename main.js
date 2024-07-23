@@ -17,6 +17,10 @@ nav.onclick = function () {
       right:"1vw"
     });
     gsap.from(".full h4",{
+      rotateX:"30deg",
+      stagger:0.2,
+    })
+    gsap.from(".full h4",{
         opacity:1,
         duration:1,
         stagger:0.5
