@@ -810,14 +810,14 @@ nav img {
 }
 
 .bur-text-box {
-    height: 2.1vw;
-    width: 20vw;
-    border-radius: 10px;
-    background: skyblue;
+    height: 2.5vw;
+    width: 13vw;
+    border-radius: 50px;
+    background: orange;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1vw;
+    font-size: 1.4vw;
     color: black;
     font-family: sans-serif;
     margin-top: 30px;
@@ -826,16 +826,27 @@ nav img {
 .price-bug {
     margin-top: 30px;
     font-family: beauty;
-    font-size: 1.4vw;
+    font-size: 1.5vw;
     font-weight: 300;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     gap: 30px;
+    padding: 0 0.2vw;
+    border-radius: 50px;
+    /* border: 1px solid black; */
+    width: 15vw;
+    background-color: red;
+    color: white;
 }
 
 .price-bug img {
     height: 3vw;
+    margin-top: 0.5vw;
+    /* background-color: black; */
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    padding: 0.2vw;
     cursor: pointer;
 }
 
@@ -892,11 +903,13 @@ nav img {
 }
 
 .sec-sec-right {
-    width: 30%;
-    height: 50%;
+    width: 25%;
+    height: 40%;
     background: rgb(255, 30, 30);
-    margin-right: 4vw;
-    border-radius: 10px;
+    /* margin-right: 4vw; */
+    border-radius: 50px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -907,7 +920,12 @@ nav img {
 
 .sec-sec-right h1 {
     color: white;
+    font-size: 2.5vw;
 }
+.sec-sec-right h4 {
+    font-size: 1.7vw;
+}
+
 
 #sectionThird {
     width: 100%;
@@ -1135,8 +1153,8 @@ nav img {
 }
 
 .menu-part1 .img {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     border-radius: 50%;
     background: white;
     /* overflow: hidden; */
@@ -1151,8 +1169,8 @@ nav img {
 }
 
 .img.second {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     border-radius: 50%;
     background: white;
     overflow: hidden;
@@ -1168,8 +1186,8 @@ nav img {
 }
 
 .img.fourth {
-    height: 250px;
-    width: 250px;
+    height: 400px;
+    width: 400px;
 }
 
 .img.fourth img {
