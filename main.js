@@ -8,16 +8,8 @@ window.onload = function () {
   document.querySelector("#preloader").style.display= "none"
 }
 
-
 // preloader
 
-
-// (function () {
-//   const scroll = new LocomotiveScroll({
-//     el: document.querySelector('[data-scroll-container]'),
-//     smooth: true,
-//   });
-// })();
 
 // Scroll to top on reload
 window.onbeforeunload = function () {
@@ -25,12 +17,7 @@ window.onbeforeunload = function () {
 };
 
 // Preloader Animation using GSAP
-let preloaderTimeline = gsap.timeline({
-  onComplete: function () {
-    // Enable scrolling after the animation
-    // document.body.style.overflow = "visible";
-  }
-});
+let preloaderTimeline = gsap.timeline();
 
 // Animate preloader divs
 preloaderTimeline.to(".preloaderDiv", {
@@ -98,10 +85,6 @@ preloaderTimeline.to(".pre-logo-text", {
   opacity: 0,
 }, "a");
 
-// preloaderTimeline.to("#preloader", {
-//   zIndex: -9
-// });
-
 
 
 // nav code 
@@ -119,9 +102,15 @@ nav.onclick = function () {
       right: "1vw"
     });
     gsap.from(".full h4", {
-      opacity: 1,
+      opacity: 0,
       duration: 1,
-      stagger: 0.5
+      stagger: 0.5,
+      x:"200px"
+    })
+    gsap.from(".nav-social i",{
+      opacity:0,
+      stagger:0.5,
+      delay:3,
     })
   }
   else {
@@ -216,14 +205,6 @@ function rotateLeft() {
     centerImg.src = arr[index].src;
   }, 220);
 }
-
-
-// setInterval(() => {
-//   // rotateRight()
-//   // rotateLeft()
-// }, 2000);
-
-
 
 rightBtn.addEventListener("click", rotateRight)
 leftbtn.addEventListener("click", rotateLeft)
@@ -464,27 +445,6 @@ gallery.to(".middle-video", {
 
 
 
-
-// //VIDEO SECTION
-// var vl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#video-section",
-//     scroller: "body",
-//     // markers:true,
-//     start: "100% 130%",
-//     end: "100% 80%",
-//     scrub: 2,
-//     duration: 2,
-//     // pin:true,
-//   }
-// });
-// vl.to("#video-section .video video", {
-//   width: "90vw",
-//   height: "90vh",
-//   borderRadius: "20px"
-// })
-
-
 // burgeranimation page
 let burgerpageTimeline = gsap.timeline({
   scrollTrigger: {
@@ -530,18 +490,19 @@ burgerpageTimeline.from("#burgeranimtionPage1 h1", {
 burgerpageTimeline.to("#burgeranimationPage2", {
   width: "100vw",
   ease: Expo.isOut,
-  duration: 4
+  duration: 8,
+  delay:10
 })
 
 burgerpageTimeline.from("#burgeranimationPage2 .burgerimg", {
   top: "150%",
-  duration: 4,
+  duration: 7,
 })
 
 burgerpageTimeline.from("#burgeranimationPage2 .bi", {
   top: "50%",
   left: "50%",
-  duration: 2,
+  duration: 4,
   zindex: -1,
   scale: 0
 }, "beauty")
@@ -549,6 +510,7 @@ burgerpageTimeline.from("#burgeranimationPage2 .bi", {
 burgerpageTimeline.from("#burgeranimationPage2 h1", {
   top: "50%",
   left: "50%",
+  duration:4,
   opacity: 0,
   scale: 0
 }, "beauty")
@@ -556,18 +518,19 @@ burgerpageTimeline.from("#burgeranimationPage2 h1", {
 burgerpageTimeline.to("#burgeranimationPage3", {
   width: "100vw",
   ease: Expo.isOut,
-  duration: 4
+  duration: 8,
+  delay:10,
 })
 
 burgerpageTimeline.from("#burgeranimationPage3 .burgerimg", {
   top: "150%",
-  duration: 4
+  duration: 7
 })
 
 burgerpageTimeline.from("#burgeranimationPage3 .bi", {
   top: "50%",
   left: "50%",
-  duration: 2,
+  duration: 4,
   zindex: -1,
   scale: 0
 }, "kaushal")
@@ -576,7 +539,8 @@ burgerpageTimeline.from("#burgeranimationPage3 h1", {
   top: "50%",
   left: "50%",
   opacity: 0,
-  scale: 0
+  scale: 0,
+  duration:4,
 }, "kaushal")
 
 
