@@ -84,9 +84,10 @@ body {
 }
 
 #MAIN{
+    margin: 0 auto;
     width: 100%;
-    /* display: none; */
     position: relative;
+    max-width: 1920px;
 }
 
 #cursor{
