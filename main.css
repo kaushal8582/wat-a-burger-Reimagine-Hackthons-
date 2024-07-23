@@ -84,6 +84,7 @@ body {
 }
 
 
+
 nav {
     height: 11vh;
     width: 100vw;
@@ -119,6 +120,7 @@ nav img {
 .nav-bar p {
     font-size: 1.3vw;
     text-transform: uppercase;
+    font-family: archivo;
 }
 
 .toggle {
@@ -126,7 +128,7 @@ nav img {
     top: 1.6vw;
     right: -1.2vw;
     width: 10.2vw;
-    height: 40px;
+    height: 4vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,26 +169,28 @@ nav img {
 .full {
     height: 88vh;
     width: 32vw;
-    background-color: #f06630;
+    background-color: rgba(255, 158, 4, 0.3);
     position: fixed;
-    top: 4.8vw;
+    top: 4.9vw;
     right: -60vw;
     border-radius: 1.5vw;
     overflow: hidden;
     transition: height 0.7s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1vw;
+    justify-content: flex-start;
+    gap: 1.2vw;
     opacity: 0;
+    padding: 5vw 7vw;
+    backdrop-filter: blur(10px);
 }
 
 .full h4 {
-    font-size: 3vw;
+    font-size: 2.8vw;
     font-weight: 500;
     text-transform: uppercase;
     font-family: archivo;
-    text-align: center;
+    text-align: start;
 }
 
 .full.active {
@@ -195,14 +199,151 @@ nav img {
 
 .full .nav-social {
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5vw;
     position: relative;
-    top: 6rem;
+    top: 5vw;
     left: 3.5vw;
 }
 
 .full .nav-social i {
-    font-size: 1.5rem;
+    font-size: 2vw;
+}
+
+@media (max-width:1024px) {
+    nav .toggle {
+        top: 3vw;
+    }
+
+    nav .full {
+        top: 7vw;
+        width: 35vw;
+    }
+}
+
+@media (max-width:768px) {
+    nav .toggle {
+        top: 3vw;
+    }
+
+    nav .full {
+        top: 7vw;
+        width: 40vw;
+    }
+}
+
+@media (max-width:600px) {
+    nav .toggle {
+        top: 4vw;
+    }
+
+    nav .full {
+        width: 50vw;
+        top: 8vw;
+    }
+}
+
+@media (max-width:500px) {
+    nav .toggle {
+        top: 5vw;
+    }
+
+    nav .full {
+        top: 9vw;
+    }
+}
+
+@media (max-width:425px) {
+    nav .toggle {
+        top: 6vw;
+    }
+
+    nav .full {
+        width: 60vw;
+        top: 11vw;
+    }
+
+    nav img {
+        height: 30vw;
+        margin-left: 7vw;
+    }
+
+    .nav-bar {
+        padding: 0.5vw 0.9vw;
+        height: 6vw;
+        width: 14vw;
+        display: flex;
+        gap: 0.8vw;
+        align-items: center;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 8vw;
+
+
+    }
+
+    .nav-bar p {
+        font-size: 2.5vw;
+        text-transform: uppercase;
+    }
+
+}
+
+@media (max-width:375px) {
+    nav .toggle {
+        top: 7vw;
+    }
+
+    nav .full {
+        width: 75vw;
+        top: 14vw;
+    }
+}
+
+@media (max-width:320px) {
+    nav .toggle {
+        top: 8vw;
+        height: 5vw;
+        right: 1vw;
+
+    }
+
+    .toggle span {
+        position: absolute;
+        width: 3.2vw;
+        height: 0.3vw;
+        background-color: black;
+        border-radius: 0.9vw;
+        transition: 0.5s;
+    }
+
+    nav .full {
+        width: 95vw;
+        top: 15vw;
+    }
+
+    nav img {
+        height: 40vw;
+        margin-left: 10vw;
+    }
+
+    .nav-bar {
+        padding: 0.5vw 0.9vw;
+        height: 7vw;
+        width: 18vw;
+        display: flex;
+        gap: 0.8vw;
+        align-items: center;
+        position: relative;
+        border: 1px solid black;
+        border-radius: 8vw;
+
+
+    }
+
+    .nav-bar p {
+        font-size: 3vw;
+        text-transform: uppercase;
+    }
 }
 
 /* temp page */
@@ -2155,6 +2296,7 @@ nav img {
     width: 0vw;
     background: rgb(73, 57, 57);
 }
+
 #burgeranimationPage3 {
     width: 0vw;
     background: rgb(57, 29, 157);
