@@ -4,7 +4,7 @@
 })();
 
 window.onload = function () {
-  document.querySelector("#MAIN").style.display = "block"
+  // document.querySelector("#MAIN").style.display = "block"
   document.querySelector("#preloader").style.display= "none"
 }
 

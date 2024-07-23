@@ -85,7 +85,7 @@ body {
 
 #MAIN{
     width: 100%;
-    display: none;
+    /* display: none; */
 }
 
 #preloader{
