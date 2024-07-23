@@ -691,5 +691,16 @@ gsap.from("#footer .footer-circle-logo img", {
     scrub: 2
   }
 })
-
+gsap.from("#footer .footer-left img",{
+  translateX: ("-30vw"),
+  duration:3,
+  scrollTrigger:{
+    trigger:"#footer",
+    scroller:"body",
+    // markers:true,
+    start:"25% 90%",
+    end:"25% 50%",
+    scrub:2
+  }
+})
 
