@@ -1433,7 +1433,6 @@ nav img {
 .textp span {
     display: inline-block;
 }
-
 .salt {
     position: absolute;
     top: 32%;
@@ -1823,16 +1822,18 @@ nav img {
 
 .recipecard>h1 {
     position: absolute;
-    top: -17%;
+    top: -13%;
     z-index: 2;
     font-weight: 800;
     font-family: archivo;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     text-transform: uppercase;
 }
-
+.recipecard6 h1 {
+    font-size: 2.5vw;
+}
 .recipecard img {
     width: 100%;
     height: 100%;
@@ -1840,9 +1841,10 @@ nav img {
 }
 
 .rec-Card p {
-    font-size: 1vw;
+    font-size: 1.1vw;
     text-align: center;
     margin-top: 10px;
+    font-family: f;
 }
 
 .recipecard1 {
@@ -2225,6 +2227,7 @@ nav img {
     width: 80vw;
     border-radius: 50px;
     object-fit: cover;
+    object-position: center;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 
