@@ -89,7 +89,7 @@ body {
     max-width: 1920px;
 }
 
-#cursor{
+#cursor {
     position: absolute;
     top: 0;
     left: 0;
@@ -256,34 +256,32 @@ nav img {
     padding: 0.5vw 0.7vw;
     height: 3.2vw;
     width: 9.4vw;
-    display: flex;
     gap: 0.8vw;
-    align-items: center;
     position: relative;
     border: 1px solid black;
     border-radius: 2vw;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-bar p {
     font-size: 1.3vw;
     text-transform: uppercase;
     font-family: archivo;
+
 }
 
 .toggle {
-    position: fixed;
-    top: 1.6vw;
-    right: -1.2vw;
     width: 10.2vw;
-    height: 4vw;
+    height: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 100;
+    padding-top: 20px;
 }
 
 .toggle span {
@@ -296,7 +294,7 @@ nav img {
 }
 
 .toggle span:nth-child(1) {
-    top: 0.72vw;
+    top: 2vw;
 }
 
 
@@ -305,13 +303,13 @@ nav img {
 }
 
 .toggle.active span:nth-child(1) {
-    top: 1vw;
+    top: 1.5vw;
     transform: rotate(45deg);
 }
 
 
 .toggle.active span:nth-child(2) {
-    top: 1vw;
+    top: 1.5vw;
     transform: rotate(-45deg);
 }
 
@@ -385,9 +383,21 @@ nav img {
         top: 3vw;
     }
 
+    .toggle span {
+        width: 3.2vw;
+        height: 0.15vw;
+    }
+
+    .nav-bar {
+        width: 16.4vw;
+        height: 5.4vw;
+        border-radius: 3vw;
+    }
+
     nav .full {
         top: 7vw;
-        width: 40vw;
+        width: 50vw;
+        height: 60px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -396,8 +406,25 @@ nav img {
 
     }
 
+    .nav-bar p {
+        font-size: 2vw;
+    }
+
+    nav img {
+        height: 30vw;
+        margin-left: 10vw;
+    }
+
     .full h4 {
         font-size: 4vw;
+    }
+
+    .toggle span:nth-child(1) {
+        top: 3vw;
+    }
+
+    .toggle span:nth-child(2) {
+        top: 2.29vw;
     }
 }
 
@@ -446,6 +473,9 @@ nav img {
 @media (max-width:425px) {
     nav .toggle {
         top: 6vw;
+    }
+    nav{
+        padding: 0 4vw;
     }
 
     nav .full {
@@ -2461,7 +2491,7 @@ nav img {
     overflow: hidden;
 }
 
-#burgeranimationPage3 .burgerimg{
+#burgeranimationPage3 .burgerimg {
     /* scale: 1.7; */
     width: 1100px;
 }
