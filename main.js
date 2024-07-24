@@ -133,12 +133,12 @@ navBar.onclick = function () {
     gsap.from(".full h4", {
       opacity: 0,
       duration: 1,
-      stagger: 0.5,
+      stagger: 0.4,
       x:"200px"
     })
     gsap.from(".nav-social i",{
       opacity:0,
-      stagger:0.5,
+      stagger:0.3,
       delay:3,
     })
   }
@@ -253,14 +253,14 @@ let recipeTimeline = gsap.timeline({
 });
 
 recipeTimeline
-  .from(".yellowbox", { height: 0, opacity: 0 }, "<")
-  .from(".yellowbox img", { opacity: 0, height: 0 }, "<") // "<" starts this animation at the same time as the previous one
-  .from(".recipecard1", { opacity: 0, left: "-20%", rotate: "60deg" }, "<")
-  .from(".recipecard2", { opacity: 0, left: "-20%", rotate: "60deg" }, "<")
-  .from(".recipecard3", { opacity: 0, right: "-20%", rotate: "-60deg" }, "<")
-  .from(".recipecard4", { opacity: 0, right: "-20%", rotate: "-60deg" }, "<")
-  .from(".recipecard5", { opacity: 0, right: "-20%", rotate: "-60deg" }, "<")
-  .from(".recipecard6", { opacity: 0, left: "-20%", rotate: "60deg" }, "<")
+  .from(".yellowbox", { height: 0, opacity: 0 },"<")
+  .from(".yellowbox img", {height: 0, opacity: 0, },"<") // "<" starts this animation at the same time as the previous one
+  .from(".recipecard1", { opacity: 0, left: "-30%", rotate: "60deg" },"<")
+  .from(".recipecard2", { opacity: 0, left: "-30%", rotate: "60deg" },"<")
+  .from(".recipecard3", { opacity: 0, right: "-30%", rotate: "-60deg" },"<")
+  .from(".recipecard4", { opacity: 0, right: "-30%", rotate: "-60deg" },"<")
+  .from(".recipecard5", { opacity: 0, right: "-30%", rotate: "-60deg" },"<")
+  .from(".recipecard6", { opacity: 0, left: "-30%", rotate: "60deg" },"<");
 
 // Create another timeline for the animations with different start positions
 let recipeTimeline2 = gsap.timeline({
@@ -282,7 +282,7 @@ window.addEventListener("wheel", function (dets) {
   if (dets.deltaY > 0) {
     gsap.to(".marque", {
       transform: "translateX(-200%)",
-      duration: 4,
+      duration: 5,
       repeat: -1,
       ease: "none"
     })
@@ -290,7 +290,7 @@ window.addEventListener("wheel", function (dets) {
   } else {
     gsap.to(".marque", {
       transform: "translateX(0)",
-      duration: 4,
+      duration: 5,
       repeat: -1,
       ease: "none"
     })
@@ -713,3 +713,41 @@ gsap.from("#footer .footer-left img",{
   }
 })
 
+
+
+
+
+
+
+
+
+
+
+
+;(function(){
+  let chck_if_gsap_loaded = setInterval(function(){
+      if(window.gsap && window.ScrollTrigger){
+          gsap.registerPlugin(ScrollTrigger);
+          slide_background();
+          clearInterval(chck_if_gsap_loaded);
+      }
+  }, 500);
+  function slide_background(){
+    gsap.to("nav .nav-bar,nav .nav-bar .toggle span",{
+    scrollTrigger: {
+    trigger: "#menu",
+    scroller:"body",
+    start: "top 0",
+    end:"top -1%",
+    scrub:2,
+    // markers:true
+    },
+      color:"white",
+      border:"1px solid white",
+      // duration: 0.2,
+    },"abcde"),
+    gsap.to("nav .full",{
+      backgroundColor: "rgba(255, 255,255, 0.3)",
+    },"abcde");
+  }
+})();

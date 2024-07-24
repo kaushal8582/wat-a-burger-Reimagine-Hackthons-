@@ -310,6 +310,7 @@ nav img {
     height: 88vh;
     width: 32vw;
     background-color: rgba(255, 158, 4, 0.3);
+    /* background-color: rgba(255, 255,255, 0.3); */
     position: fixed;
     top: 4.9vw;
     right: -60vw;
@@ -603,7 +604,9 @@ nav img {
 #temp {
     width: 100%;
     height: 100vh;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.9);
+    /* background-color: rgb(248, 244, 244); */
+    /* background-color: beige;     */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -791,13 +794,13 @@ nav img {
 
 .temp-good-food-text h1 {
     text-transform: uppercase;
-    font-family: kaushal;
+    /* font-family: kaushal; */
     font-weight: 800;
     font-size: 3.5vw;
 }
 
 .templeftTexts {
-    padding-top: 10vw;
+    padding-top: 8vw;
     width: 100%;
 }
 
@@ -841,10 +844,10 @@ nav img {
     top: 100%;
     left: 1.9vw;
     line-height: 9vw;
-    font-size: 9vw;
+    font-size: 8.8vw;
     color: orange;
     /* color: #f03f04; */
-    text-shadow: 0 0 0.13vw black;
+    /* text-shadow: 0 0 0.13vw black; */
     transition: all 0.3s ease-in-out;
     word-spacing: -1.53vw;
     text-align: left;
@@ -852,6 +855,7 @@ nav img {
     text-transform: uppercase;
     font-weight: 900;
     font-family: kaushal;
+    text-shadow: 0.1vw 0.25vw 0.3vw black;
 
 }
 
@@ -1023,6 +1027,8 @@ nav img {
 #burgerShopPage {
     width: 100%;
     background: rgba(101, 26, 26, 0.067);
+    /* background-color: white; */
+    /* opacity: 0.7; */
     padding-bottom: 5vw;
 }
 
@@ -1797,7 +1803,8 @@ nav img {
 #ourSecretRecipe {
     width: 100%;
     height: 150vh;
-    background: #f5e5d5;
+    /* background: #f5e5d5; */
+    background-color: rgba(255, 255, 255, 0.9);
     position: relative;
     /* padding-bottom: 30px; */
     overflow: hidden;
@@ -1975,7 +1982,7 @@ nav img {
 
 
 .marque-page {
-    height: 20vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1983,10 +1990,11 @@ nav img {
 }
 
 .marque-page .move {
-    background-color: orangered;
+    /* background-color: orangered; */
     display: flex;
     padding: 1vw 0;
     overflow: hidden;
+    animation: color-changing 6s infinite 0.5s ease-in-out;
 }
 
 .marque-page .marque {
@@ -2006,13 +2014,23 @@ nav img {
 }
 
 .marque-page .marque img {
-    height: 2.8rem;
-    width: 6rem;
+    height: 2.9rem;
+    width: 6.1rem;
     object-position: center;
     object-fit: cover;
     border-radius: 50px;
 }
-
+@keyframes color-changing {
+    0%{
+        background-color: orange;
+    }
+    50%{
+        background-color:  #e69e18;
+    }
+    100%{
+        background-color: orangered;
+    }
+}
 @media (max-width:425px) {
     .marque-page .marque h1 {
         font-size: 2rem;
@@ -2039,6 +2057,7 @@ nav img {
 .food-mood {
     height: 50vh;
     width: 100vw;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .food-mood .content {
@@ -2085,15 +2104,15 @@ nav img {
     gap: 1.3vw;
 }
 
-.food-mood .smile {
+.food-mood .left .smile {
     height: 10%;
     width: 30%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom: 2px solid black;
-    border-radius: 40%;
+    border-top: 2px solid black;
+    border-radius: 50%;
     position: absolute;
-    top: 22%;
+    top: 29%;
 
 }
 
@@ -2137,7 +2156,7 @@ nav img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 2px solid black;
-    border-radius: 40%;
+    border-radius: 50%;
     position: absolute;
     top: 22%;
 
@@ -2201,6 +2220,7 @@ nav img {
 .food-gallery {
     min-height: 100vh;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .food-gallery .gallery {
@@ -2724,6 +2744,7 @@ nav img {
     height: 100vh;
     width: 100vw;
     /* background-color: antiquewhite; */
+    background: rgba(101, 26, 26, 0.067);
     overflow: hidden;
 }
 
