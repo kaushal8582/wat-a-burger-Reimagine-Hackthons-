@@ -770,3 +770,20 @@ gsap.from("#footer .footer-left img", {
 
 
 
+
+
+
+
+
+gsap.from("#review .reviewcard .img",{
+  width:0,
+  opacity:0,
+  // duration:2,
+  scrollTrigger:{
+    trigger:"#review .reviewcard",
+    scroller:"body",
+    // markers:true,
+    start:"0% 70%",
+    end:"50% 70%",
+}                                                              
+})
