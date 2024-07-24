@@ -107,6 +107,7 @@ body {
     background: #00296B;
     position: absolute;
     width: 0%;
+    background-color: beige;
 }
 
 .preloaderDiv:nth-child(1) {
@@ -183,7 +184,7 @@ body {
 
 .pre-logo-text span {
     display: inline-block;
-    color: yellow;
+    color: black;
 }
 
 .pre-bottom-counter {
@@ -199,6 +200,7 @@ body {
     /* background: red; */
     transform: translate(-50%, -50%);
     overflow: hidden;
+    color: black;
 }
 
 .pre-bottom-counter span {
@@ -1845,7 +1847,9 @@ nav img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background: rgb(255, 222, 8);
+    overflow: hidden;
 }
+
 
 .recipecard>h1 {
     position: absolute;
@@ -1865,6 +1869,7 @@ nav img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s ease-in-out;
 }
 
 .rec-Card p {
@@ -1987,6 +1992,7 @@ nav img {
     display: flex;
     padding: 1vw 0;
     overflow: hidden;
+    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .marque-page .marque {

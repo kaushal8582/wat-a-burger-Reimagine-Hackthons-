@@ -242,6 +242,20 @@ leftbtn.addEventListener("click", rotateLeft)
 
 // our secreate recipe page animation
 
+ const recipecardAll= document.querySelectorAll(".recipecard") 
+
+ recipecardAll.forEach((elem)=>{
+  elem.addEventListener("mousemove",()=>{
+    const img = elem.querySelector(".rec-img-div img")
+    img.style.scale = "1.2"
+  })
+  elem.addEventListener("mouseleave",()=>{
+    const img = elem.querySelector(".rec-img-div img")
+    img.style.scale = "1"
+  })
+ })
+
+
 let recipeTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: "#ourSecretRecipe",
