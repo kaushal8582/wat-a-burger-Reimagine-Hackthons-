@@ -47,11 +47,11 @@ preloaderTimeline.from(".pre-logo-text span", {
   stagger: 0.1,
 });
 preloaderTimeline.to(".first-img-preloader img", {
-  left:"0%"
- },"bea");
+  left: "0%"
+}, "bea");
 preloaderTimeline.to(".second-img-preloader img", {
-  right:"5%"
- },"bea");
+  right: "5%"
+}, "bea");
 
 const allBotomSpanPre = document.querySelectorAll(".pre-bottom-counter span");
 
@@ -68,24 +68,24 @@ while (preloaderIndex <= 3) {
 }
 
 preloaderTimeline.to(".first-img-preloader img", {
-  left:"-50%"
- },"sap");
+  left: "-50%"
+}, "sap");
 preloaderTimeline.to(".second-img-preloader img", {
-  right:"-50%"
- },"sap");
+  right: "-50%"
+}, "sap");
 
 preloaderTimeline.to(".pre-logo-text", {
   height: "40vw",
-},"tannu");
+}, "tannu");
 
 
 preloaderTimeline.to(".pre-logo-text span", {
   fontSize: "10vw",
-},"tannu");
+}, "tannu");
 
 preloaderTimeline.to("#preloader", {
-  backgroundColor:"rgb(170, 168, 168,0)"
-},"tannu");
+  backgroundColor: "rgb(170, 168, 168,0)"
+}, "tannu");
 
 
 
@@ -105,11 +105,11 @@ preloaderTimeline.to(".preloaderDiv", {
 preloaderTimeline.to(".pre-logo-text", {
   zIndex: -9,
   opacity: 0,
-  delay:0.4,
+  delay: 0.4,
 }, "a");
 preloaderTimeline.to("#preloader", {
-  scale:0,
-  borderRadius:"50%"
+  scale: 0,
+  borderRadius: "50%"
 });
 
 
@@ -134,12 +134,12 @@ navBar.onclick = function () {
       opacity: 0,
       duration: 1,
       stagger: 0.4,
-      x:"200px"
+      x: "200px"
     })
-    gsap.from(".nav-social i",{
-      opacity:0,
-      stagger:0.3,
-      delay:3,
+    gsap.from(".nav-social i", {
+      opacity: 0,
+      stagger: 0.3,
+      delay: 3,
     })
   }
   else {
@@ -242,18 +242,18 @@ leftbtn.addEventListener("click", rotateLeft)
 
 // our secreate recipe page animation
 
- const recipecardAll= document.querySelectorAll(".recipecard") 
+const recipecardAll = document.querySelectorAll(".recipecard")
 
- recipecardAll.forEach((elem)=>{
-  elem.addEventListener("mousemove",()=>{
+recipecardAll.forEach((elem) => {
+  elem.addEventListener("mousemove", () => {
     const img = elem.querySelector(".rec-img-div img")
     img.style.scale = "1.2"
   })
-  elem.addEventListener("mouseleave",()=>{
+  elem.addEventListener("mouseleave", () => {
     const img = elem.querySelector(".rec-img-div img")
     img.style.scale = "1"
   })
- })
+})
 
 
 let recipeTimeline = gsap.timeline({
@@ -267,14 +267,14 @@ let recipeTimeline = gsap.timeline({
 });
 
 recipeTimeline
-  .from(".yellowbox", { height: 0, opacity: 0 },"<")
-  .from(".yellowbox img", {height: 0, opacity: 0, },"<") // "<" starts this animation at the same time as the previous one
-  .from(".recipecard1", { opacity: 0, left: "-30%", rotate: "60deg" },"<")
-  .from(".recipecard2", { opacity: 0, left: "-30%", rotate: "60deg" },"<")
-  .from(".recipecard3", { opacity: 0, right: "-30%", rotate: "-60deg" },"<")
-  .from(".recipecard4", { opacity: 0, right: "-30%", rotate: "-60deg" },"<")
-  .from(".recipecard5", { opacity: 0, right: "-30%", rotate: "-60deg" },"<")
-  .from(".recipecard6", { opacity: 0, left: "-30%", rotate: "60deg" },"<");
+  .from(".yellowbox", { height: 0, opacity: 0 }, "<")
+  .from(".yellowbox img", { height: 0, opacity: 0, }, "<") // "<" starts this animation at the same time as the previous one
+  .from(".recipecard1", { opacity: 0, left: "-30%", rotate: "60deg" }, "<")
+  .from(".recipecard2", { opacity: 0, left: "-30%", rotate: "60deg" }, "<")
+  .from(".recipecard3", { opacity: 0, right: "-30%", rotate: "-60deg" }, "<")
+  .from(".recipecard4", { opacity: 0, right: "-30%", rotate: "-60deg" }, "<")
+  .from(".recipecard5", { opacity: 0, right: "-30%", rotate: "-60deg" }, "<")
+  .from(".recipecard6", { opacity: 0, left: "-30%", rotate: "60deg" }, "<");
 
 // Create another timeline for the animations with different start positions
 let recipeTimeline2 = gsap.timeline({
@@ -529,7 +529,7 @@ burgerpageTimeline.from("#burgeranimtionPage1 h1", {
   left: "50%",
   opacity: 0,
   scale: 0,
-  duration:57,
+  duration: 57,
 }, "a")
 
 
@@ -538,7 +538,7 @@ burgerpageTimeline.to("#burgeranimationPage2", {
   width: "100vw",
   ease: Expo.isOut,
   duration: 57,
-  delay:10
+  delay: 10
 })
 
 burgerpageTimeline.from("#burgeranimationPage2 .burgerimg", {
@@ -557,7 +557,7 @@ burgerpageTimeline.from("#burgeranimationPage2 .bi", {
 burgerpageTimeline.from("#burgeranimationPage2 h1", {
   top: "50%",
   left: "50%",
-  duration:57,
+  duration: 57,
   opacity: 0,
   scale: 0
 }, "beauty")
@@ -566,7 +566,7 @@ burgerpageTimeline.to("#burgeranimationPage3", {
   width: "100vw",
   ease: Expo.isOut,
   duration: 57,
-  delay:10,
+  delay: 10,
 })
 
 burgerpageTimeline.from("#burgeranimationPage3 .burgerimg", {
@@ -587,7 +587,7 @@ burgerpageTimeline.from("#burgeranimationPage3 h1", {
   left: "50%",
   opacity: 0,
   scale: 0,
-  duration:57,
+  duration: 57,
 }, "kaushal")
 
 
@@ -625,15 +625,15 @@ function animateReview(direction) {
   reviewIndex = nextIndex;
 }
 
-gsap.to("#review",{
-  backgroundColor:"antiquewhite",
-  ease:"expo.inOut",
-  duration:4,
-  scrollTrigger:{
-    trigger:"#review",
-    start:"top 20%",
-    end:"top 25%",
-    scrub:true,
+gsap.to("#review", {
+  backgroundColor: "antiquewhite",
+  ease: "expo.inOut",
+  duration: 4,
+  scrollTrigger: {
+    trigger: "#review",
+    start: "top 20%",
+    end: "top 25%",
+    scrub: true,
   }
 })
 
@@ -714,16 +714,16 @@ gsap.from("#footer .footer-circle-logo img", {
     scrub: 2
   }
 })
-gsap.from("#footer .footer-left img",{
+gsap.from("#footer .footer-left img", {
   translateX: ("-30vw"),
-  duration:3,
-  scrollTrigger:{
-    trigger:"#footer",
-    scroller:"body",
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#footer",
+    scroller: "body",
     // markers:true,
-    start:"25% 90%",
-    end:"25% 50%",
-    scrub:2
+    start: "25% 90%",
+    end: "25% 50%",
+    scrub: 2
   }
 })
 
@@ -746,13 +746,15 @@ gsap.from("#footer .footer-left img",{
           clearInterval(chck_if_gsap_loaded);
       }
   }, 500);
+
+
   function slide_background(){
     gsap.to("nav .nav-bar,nav .nav-bar .toggle span",{
     scrollTrigger: {
     trigger: "#menu",
     scroller:"body",
     start: "top 0",
-    end:"top -1%",
+    end:"top 5%",
     scrub:2,
     // markers:true
     },
@@ -765,3 +767,6 @@ gsap.from("#footer .footer-left img",{
     },"abcde");
   }
 })();
+
+
+
