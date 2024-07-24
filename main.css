@@ -2748,8 +2748,7 @@ nav img {
 #footer {
     height: 100vh;
     width: 100vw;
-    /* background-color: antiquewhite; */
-    background: rgba(101, 26, 26, 0.067);
+    background: #f5e5d5;
     overflow: hidden;
 }
 
