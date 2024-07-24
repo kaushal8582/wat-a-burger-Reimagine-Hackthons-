@@ -2578,7 +2578,7 @@ nav img {
     text-align: center;
     font-size: 3vw;
     font-weight: 700;
-    color: orangered;
+    color: black;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -2595,8 +2595,8 @@ nav img {
     width: 70%;
     height: 65%;
     position: absolute;
-    background-color: orangered;
-    color: beige;
+    background-color: #ffc83d;
+    color: black;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -3283,3 +3283,89 @@ nav img {
     top: 5%;
   
   } */
+
+
+
+
+
+
+
+  
+
+#footer .connect-with p {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer .connect-with p::after {
+    content: "";
+    position: absolute;
+    height: 0.1vw;
+    width: 0;
+    background-color: black;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer .connect-with p:hover::after {
+    bottom: 0;
+    width: 8vw;
+    border-radius: 0;
+    color: white;
+}
+
+#footer .available-on p {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer .available-on p::after {
+    content: "";
+    position: absolute;
+    height: 0.1vw;
+    width: 0;
+    background-color: black;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer .available-on p:hover::after {
+    bottom: 0;
+    width: 6vw;
+    border-radius: 0;
+    color: white;
+}
+
+
+
+#footer .quick-links p {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer .quick-links p::after {
+    content: "";
+    position: absolute;
+    height: 0.1vw;
+    width: 0;
+    background-color: black;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer .quick-links p:hover::after {
+    bottom: 0;
+    width: 7vw;
+    border-radius: 0;
+    color: white;
+}
+
