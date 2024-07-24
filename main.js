@@ -3,10 +3,10 @@
   var scroll = new LocomotiveScroll();
 })();
 
-window.onload = function () {
-  // document.querySelector("#MAIN").style.display = "block"
-  document.querySelector("#preloader").style.display= "none"
-}
+// window.onload = function () {
+//   // document.querySelector("#MAIN").style.display = "block"
+//   document.querySelector("#preloader").style.display= "none"
+// }
 
 // preloader
 
@@ -35,6 +35,8 @@ preloaderTimeline.to(".pre-logo-text", {
   opacity: 1,
 }, "kau");
 
+
+
 preloaderTimeline.from(".left-rotate-img", {
   y: "100px",
   stagger: 0.1,
@@ -44,6 +46,12 @@ preloaderTimeline.from(".pre-logo-text span", {
   y: "100px",
   stagger: 0.1,
 });
+preloaderTimeline.to(".first-img-preloader img", {
+  left:"0%"
+ },"bea");
+preloaderTimeline.to(".second-img-preloader img", {
+  right:"5%"
+ },"bea");
 
 const allBotomSpanPre = document.querySelectorAll(".pre-bottom-counter span");
 
@@ -59,13 +67,27 @@ while (preloaderIndex <= 3) {
   preloaderIndex++;
 }
 
+preloaderTimeline.to(".first-img-preloader img", {
+  left:"-50%"
+ },"sap");
+preloaderTimeline.to(".second-img-preloader img", {
+  right:"-50%"
+ },"sap");
+
 preloaderTimeline.to(".pre-logo-text", {
   height: "40vw",
-});
+},"tannu");
+
 
 preloaderTimeline.to(".pre-logo-text span", {
   fontSize: "10vw",
-});
+},"tannu");
+
+preloaderTimeline.to("#preloader", {
+  backgroundColor:"rgb(170, 168, 168,0)"
+},"tannu");
+
+
 
 // Hide preloader divs
 preloaderTimeline.to(".preloaderDiv", {
@@ -83,16 +105,23 @@ preloaderTimeline.to(".preloaderDiv", {
 preloaderTimeline.to(".pre-logo-text", {
   zIndex: -9,
   opacity: 0,
+  delay:0.4,
 }, "a");
+preloaderTimeline.to("#preloader", {
+  scale:0,
+  borderRadius:"50%"
+});
+
 
 
 
 // nav code 
 
 let nav = document.querySelector(".toggle");
+let navBar = document.querySelector(".nav-bar");
 let fullNav = document.querySelector(".full");
 
-nav.onclick = function () {
+navBar.onclick = function () {
   nav.classList.toggle("active");
   fullNav.classList.toggle("active");
   if (fullNav.classList.contains("active")) {
@@ -269,6 +298,8 @@ window.addEventListener("wheel", function (dets) {
 })
 
 // page animation
+
+
 let am = gsap.timeline({
   scrollTrigger: {
     trigger: ".page",
@@ -446,10 +477,11 @@ gallery.to(".middle-video", {
 
 
 // burgeranimation page
+
 let burgerpageTimeline = gsap.timeline({
   scrollTrigger: {
     start: "50% 50%",
-    end: "bottom top",
+    end: "bottom -200%",
     // markers:true,
     scrub: true,
     trigger: "#burgeranimation",
@@ -459,11 +491,11 @@ let burgerpageTimeline = gsap.timeline({
 
 gsap.from("#burgeranimtionPage1 .burgerimg", {
   top: "100%",
-  duration: 3,
+  duration: 10,
   scrollTrigger: {
     trigger: "#burgeranimation",
     start: "30% 50%",
-    end: "50% 50%",
+    end: "50% 10%",
     // markers:true,
     scrub: true
 
@@ -473,7 +505,7 @@ gsap.from("#burgeranimtionPage1 .burgerimg", {
 burgerpageTimeline.from(" #burgeranimtionPage1 .bi", {
   top: "50%",
   left: "50%",
-  duration: 2,
+  duration: 57,
   zindex: -1,
   scale: 0
 }, "a")
@@ -482,7 +514,8 @@ burgerpageTimeline.from("#burgeranimtionPage1 h1", {
   top: "50%",
   left: "50%",
   opacity: 0,
-  scale: 0
+  scale: 0,
+  duration:57,
 }, "a")
 
 
@@ -490,19 +523,19 @@ burgerpageTimeline.from("#burgeranimtionPage1 h1", {
 burgerpageTimeline.to("#burgeranimationPage2", {
   width: "100vw",
   ease: Expo.isOut,
-  duration: 8,
+  duration: 57,
   delay:10
 })
 
 burgerpageTimeline.from("#burgeranimationPage2 .burgerimg", {
   top: "150%",
-  duration: 7,
+  duration: 57,
 })
 
 burgerpageTimeline.from("#burgeranimationPage2 .bi", {
   top: "50%",
   left: "50%",
-  duration: 4,
+  duration: 57,
   zindex: -1,
   scale: 0
 }, "beauty")
@@ -510,7 +543,7 @@ burgerpageTimeline.from("#burgeranimationPage2 .bi", {
 burgerpageTimeline.from("#burgeranimationPage2 h1", {
   top: "50%",
   left: "50%",
-  duration:4,
+  duration:57,
   opacity: 0,
   scale: 0
 }, "beauty")
@@ -518,19 +551,19 @@ burgerpageTimeline.from("#burgeranimationPage2 h1", {
 burgerpageTimeline.to("#burgeranimationPage3", {
   width: "100vw",
   ease: Expo.isOut,
-  duration: 8,
+  duration: 57,
   delay:10,
 })
 
 burgerpageTimeline.from("#burgeranimationPage3 .burgerimg", {
   top: "150%",
-  duration: 7
+  duration: 57
 })
 
 burgerpageTimeline.from("#burgeranimationPage3 .bi", {
   top: "50%",
   left: "50%",
-  duration: 4,
+  duration: 57,
   zindex: -1,
   scale: 0
 }, "kaushal")
@@ -540,7 +573,7 @@ burgerpageTimeline.from("#burgeranimationPage3 h1", {
   left: "50%",
   opacity: 0,
   scale: 0,
-  duration:4,
+  duration:57,
 }, "kaushal")
 
 
@@ -577,6 +610,18 @@ function animateReview(direction) {
 
   reviewIndex = nextIndex;
 }
+
+gsap.to("#review",{
+  backgroundColor:"antiquewhite",
+  ease:"expo.inOut",
+  duration:4,
+  scrollTrigger:{
+    trigger:"#review",
+    start:"top 20%",
+    end:"top 25%",
+    scrub:true,
+  }
+})
 
 reviewRight.addEventListener("click", () => animateReview(1));
 reviewLeft.addEventListener("click", () => animateReview(-1));
