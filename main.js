@@ -150,7 +150,7 @@ navBar.onclick = function () {
 
 let arr = [
   {
-    "src": "images/BURGER.png",
+    "src": "img/third img animation.png",
     "deg": "45",
   },
   {
@@ -209,8 +209,8 @@ function rotateRight() {
   temptexth4[index].style.top = '0'
   tempBox.style.transform = `translate(-50%,-50%) rotate(${arr[index].deg}deg)`
   setTimeout(() => {
-    centerImg.style.opacity = '1'
     centerImg.src = arr[index].src;
+    centerImg.style.opacity = '1'
   }, 220);
 }
 function rotateLeft() {
@@ -230,8 +230,8 @@ function rotateLeft() {
   temptexth4[index].style.top = '0'
   tempBox.style.transform = `translate(-50%,-50%) rotate(${arr[index].deg}deg)`
   setTimeout(() => {
-    centerImg.style.opacity = '1'
     centerImg.src = arr[index].src;
+    centerImg.style.opacity = '1'
   }, 220);
 }
 
@@ -380,7 +380,7 @@ allTextP.forEach((text) => {
   let clutter = ''
   splitedText.forEach((e) => {
     if (e == " ") {
-      e = "-"
+      e = "&nbsp;"
     }
     clutter += `<span class="a" >${e}</span>`
   })

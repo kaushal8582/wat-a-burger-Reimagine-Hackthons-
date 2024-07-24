@@ -714,7 +714,7 @@ nav img {
     right: 3%;
     scale: 1.6;
     transform: translate(-50%, -50%);
-    transition: all 0.3s ease-in-out;
+    transition: all 1s ease-in-out;
     overflow: hidden;
     border-radius: 50%;
 }
@@ -1725,6 +1725,7 @@ nav img {
     align-items: center;
     justify-content: center;
     background-color: antiquewhite;
+    display:none;
 }
 
 .page h1 img {
@@ -2473,12 +2474,12 @@ nav img {
     left: 50%;
 }
 #burgeranimation .burger-text3 {
-    top: 38%;
+    top: 35%;
     transform: translate(-50%, -50%);
     left: 50%;
 }
 #burgeranimation .burger-text4 {
-    top: 60%;
+    top: 65%;
     transform: translate(-50%, -50%);
     left: 50%;
 }
